@@ -1,0 +1,5 @@
+<ul>
+    <li routerLink="team-details/{{team.key}}" *ngFor="let team of teams| async| keyvalue">
+        {{team.value}}
+    </li>
+</ul>

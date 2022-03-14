@@ -1,0 +1,9 @@
+<div>
+    <div *ngFor="let player of teamDetails|async; let playerIndex = index">
+        {{playerIndex+ 1}}. {{player.name}}; {{player.age}};
+        <ng-container *ngFor="let team of player.teams; let commmaIndex = index">
+            {{teams[team]}}
+            <ng-container *ngIf="player.teams.length!=commmaIndex+1">,</ng-container>
+        </ng-container>
+    </div>
+</div>
